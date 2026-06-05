@@ -1,0 +1,15 @@
+{
+	"name": "df-gabe-azureproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "13043c09-d5b2-4266-9789-0a537c5690c8",
+		"tenantId": "7fc3a548-9c59-4012-b684-75071dd91af1"
+	}
+}
