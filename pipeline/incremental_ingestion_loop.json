@@ -43,7 +43,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "SELECT * FROM @{item().shema}.@{item().table} \nWHERE @{item().cdc_col} > '@{if(empty(item().from_date), formatDateTime(activity('last_cdc').output.value[0].cdc, 'yyyy-MM-dd HH:mm:ss'), item().from_date)}'",
+										"value": "SELECT * FROM @{item().schema}.@{item().table} \nWHERE [@{item().cdc_col}] > '@{if(empty(item().from_date), formatDateTime(activity('last_cdc').output.value[0].cdc, 'yyyy-MM-dd HH:mm:ss'), formatDateTime(item().from_date, 'yyyy-MM-dd HH:mm:ss'))}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
